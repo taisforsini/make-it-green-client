@@ -42,7 +42,7 @@ const Loader = styled("div")<LoaderProps>`
     animation-fill-mode: both;
     animation: ${loaderKeyFrame} 0.9s infinite ease-in-out;
   }
-  color: ${colors.Primary};
+  color: ${(props) => props.color || colors.Primary};
   position: relative;
   transform: translateZ(0);
   animation-delay: -0.16s;

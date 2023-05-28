@@ -57,7 +57,9 @@ const Form = () => {
       dispatch(userStore.setName(fullName));
       setSuccess(true);
 
-      if (productData.selectedProduct) navigate("/resumo");
+      setTimeout(() => {
+        if (productData.selectedProduct) navigate("/resumo");
+      }, 2000);
     }
     setIsLoading(false);
   };

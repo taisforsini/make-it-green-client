@@ -1,5 +1,4 @@
 import { colors } from "../resources/colors";
-import { Loader } from "../components/Loader/loader_style";
 import { StoreState } from "../store";
 import { useSelector } from "react-redux";
 import { useState } from "react";
@@ -7,6 +6,7 @@ import Button from "../components/Button/Button";
 import cart_api from "../services/cart_api";
 import FlexBox from "../components/FlexBox/FlexBox";
 import Header from "../components/Header/Header";
+import Loader from "../components/Loader/Loader";
 import StyledText from "../components/StyledText/StyledText";
 import UpdateUserDataModal from "../containers/UpdateUserDataModal";
 
