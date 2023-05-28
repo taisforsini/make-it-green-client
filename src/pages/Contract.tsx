@@ -164,26 +164,26 @@ const Contract = () => {
               CPF: {userData.cpf}
             </StyledText>
           </FlexBox>
+          {success ? (
+            <StyledText alignSelf="center" width="564px" margin="24px 0 0 0">
+              Parabéns! Sua compra foi registrada com sucesso! :)
+            </StyledText>
+          ) : (
+            <Button
+              borderRadius="8px"
+              margin="16px 0 0 0"
+              onClick={handleSubmit}
+              variant="contained"
+              width="564px"
+            >
+              {isLoading ? (
+                <Loader color={colors.Secondary} size="16px" />
+              ) : (
+                <StyledText color={colors.White}>Concluir compra</StyledText>
+              )}
+            </Button>
+          )}
         </FlexBox>
-        {success ? (
-          <StyledText alignSelf="center" width="564px" margin="24px 0 0 0">
-            Parabéns! Sua compra foi registrada com sucesso! :)
-          </StyledText>
-        ) : (
-          <Button
-            borderRadius="8px"
-            margin="16px 0 0 0"
-            onClick={handleSubmit}
-            variant="contained"
-            width="564px"
-          >
-            {isLoading ? (
-              <Loader color={colors.Secondary} size="16px" />
-            ) : (
-              <StyledText color={colors.White}>Concluir compra</StyledText>
-            )}
-          </Button>
-        )}
       </FlexBox>
 
       {modalOpen && (

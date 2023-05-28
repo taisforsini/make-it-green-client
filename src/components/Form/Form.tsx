@@ -57,7 +57,7 @@ const Form = () => {
       dispatch(userStore.setName(fullName));
       setSuccess(true);
 
-      if (productData.selectedProduct) navigate("/contrato");
+      if (productData.selectedProduct) navigate("/resumo");
     }
     setIsLoading(false);
   };
